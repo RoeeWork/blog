@@ -1,10 +1,10 @@
 ---
 layout: page
-title: "OverTheWire"
-permalink: /ctf/overthewire/bandit
+title: "Bandit"
+permalink: /ctf/overthewire/bandit.html
 ---
 
-- [Bandit0]({{ '/ctf/overthewire/bandit/bandit0' | relative_url }})
-- [Bandit1]({{ '/ctf/overthewire/bandit/bandit1' | relative_url }})
-- [Bandit2]({{ '/ctf/overthewire/bandit/bandit2' | relative_url }})
-- [Bandit3]({{ '/ctf/overthewire/bandit/bandit3' | relative_url }})
+- [Bandit0]({{ '/ctf/overthewire/bandit/bandit0.html' | relative_url }})
+- [Bandit1]({{ '/ctf/overthewire/bandit/bandit1.html' | relative_url }})
+- [Bandit2]({{ '/ctf/overthewire/bandit/bandit2.html' | relative_url }})
+- [Bandit3]({{ '/ctf/overthewire/bandit/bandit3.html' | relative_url }})
