@@ -41,6 +41,8 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
+permalink: pretty
+
 style: hacker
 
 # Exclude from processing.
