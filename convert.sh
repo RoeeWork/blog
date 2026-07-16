@@ -2,13 +2,14 @@
 
 set -euo pipefail
 
-if [[ $# -ne 2 ]]; then
-    echo "Usage: $0 <obsidian-directory> <output-directory>"
+if [[ $# -ne 3 ]]; then
+    echo "Usage: $0 <obsidian-directory> <output-directory> <pics-path>"
     exit 1
 fi
 
 SOURCE="$(realpath "$1")"
 DEST="$(realpath -m "$2")"
+PICS_PATH="$3"
 
 if [[ ! -d "$SOURCE" ]]; then
     echo "Error: '$SOURCE' is not a directory."
@@ -27,6 +28,8 @@ mkdir -p "$(dirname "$DEST")"
 cp -a "$SOURCE" "$DEST"
 
 echo "[*] Converting Markdown files..."
+
+export PICS_PATH
 
 find "$DEST" -type f -name "*.md" | while read -r file; do
     title="$(basename "$file" .md)"
@@ -52,28 +55,28 @@ find "$DEST" -type f -name "*.md" | while read -r file; do
         s{!\[\[(pics/[^|\]]+)\|([^\]]+)\]\]}{
             my $img = $1;
             $img =~ s/ /%20/g;
-            "![$2]($img)";
+            "![$2]({{ '\''/$ENV{PICS_PATH}/'\'' . '\''$img'\'' | relative_url }})";
         }eg;
 
         # ![[pics/image.png]]
         s{!\[\[(pics/[^\]]+)\]\]}{
             my $img = $1;
             $img =~ s/ /%20/g;
-            "![]($img)";
+            "![]({{ '\''/$ENV{PICS_PATH}/'\'' . '\''$img'\'' | relative_url }})";
         }eg;
 
         # ![[image.png|alt text]]
         s{!\[\[([^/|\]]+)\|([^\]]+)\]\]}{
-            my $img = "pics/$1";
+            my $img = $1;
             $img =~ s/ /%20/g;
-            "![$2]($img)";
+            "![$2]({{ '\''/$ENV{PICS_PATH}/'\'' . '\''$img'\'' | relative_url }})";
         }eg;
 
         # ![[image.png]]
         s{!\[\[([^/|\]]+)\]\]}{
-            my $img = "pics/$1";
+            my $img = $1;
             $img =~ s/ /%20/g;
-            "![]($img)";
+            "![]({{ '\''/$ENV{PICS_PATH}/'\'' . '\''$img'\'' | relative_url }})";
         }eg;
 
 
