@@ -4,3 +4,6 @@
 
 layout: home
 ---
+
+sup,
+this is my blog - i use this to document stuff i work on.

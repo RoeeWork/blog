@@ -1,18 +1,85 @@
 ---
 layout: page
-title: About
+title: about
 permalink: /about/
 ---
+nothing here lol
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
-
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+<pre class="ascii-art">
+              .7
+            .'/
+           / /
+          / /
+         / /
+        / /
+       / /
+      / /
+     / /         
+    / /          
+  __|/
+,-\__\
+|f-"Y\|
+\()7L/
+ cgD                            __ _
+ |\(                          .'  Y '>,
+  \ \                        / _   _   \
+   \\\                       )(_) (_)(|}
+    \\\                      {  4A   } /
+     \\\                      \uLuJJ/\l
+      \\\                     |3    p)/
+       \\\___ __________      /nnm_n//
+       c7___-__,__-)\,__)(".  \_>-<_/D
+                  //V     \_"-._.__G<D     __
+                  (       \ "-._"> G<D-_.-"_=)_
+                  "       /.__ />_c__.-__<"/ ( \
+                         <"-._>__-,G_.___)\   \7\
+                        ("-.__.| \"<.__.-" )   \ \
+                        |"-.__"\  |"-.__.-".\   \ \
+                        ("-.__"". \"-.__.-".|    \_\
+                        \"-.__""|!|"-.__.-".)     \ \
+                         "-.__""\_|"-.__.-"./      \ l
+                          ".__""">G>-.__.-">       .--,_
+                              ""  G<b-__.-"      ."   / ",
+                                   G<D          /     \_  \
+                              ___  G<D         ._/\    /  /\
+                            /".-_"-"G"<___     |   \__.-____
+                            ||,-_ "     '_"-.  |     / /   / .
+                            | (_)  __  ".-',7) |   /\| \  /-_|
+                           /\__""-/ "\ _(_)//  "/\/   \ ""/  |
+                          _)(  ""'    ",_._/    \      "/'\  .
+                         /  /             )\     \   __|  / /
+                       _/  (             |  \     ",/     \/
+                      / \ /              |  |       "-,__."
+                      /\\|               |  |
+                     / '((               |  |
+                    /  / )\              \  |
+                   /  y  \y              |Y |
+                  /  /    (              |  |
+                 L ."     |              |  /
+                | \(                     |  |
+                 \_|                     |  |
+                 |  \                    { "|
+                 | ||                    |  |
+                 |x||                    \_,/
+                 | ||                    / \'
+                 | ||                    |_/
+                 } ||                    | }\
+                 | ||                    | ||
+                 | (|                    | ||
+                 | ||                    } ||
+                 | ||                    | ||
+                 | ||                    |\||
+                 / ||                    | ||
+                 | ||                    ( |!
+                 | |/                    ) ||
+               _/   \                    | }|
+           _.-"_ ( )|   jjs              ! ||
+        c_"-_-"_    )                    | ||
+         c,-_-'_--""                     { ||
+         "C(_/"                          \ /|
+                                         (  )
+                                         /| \
+                                        /  |(
+                                       /7||\\
+                                      ()U cuu"
+</pre>
