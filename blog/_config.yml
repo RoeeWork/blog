@@ -26,6 +26,8 @@ baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "https://roeework.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  "RoeeWork"
 
+permalink: pretty
+
 header_pages:
   - about.markdown
   - ctf/index.markdown
@@ -41,7 +43,6 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-permalink: none
 
 style: hacker
 

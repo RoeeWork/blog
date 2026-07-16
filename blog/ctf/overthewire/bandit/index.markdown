@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Bandit"
-permalink: /ctf/overthewire/bandit.html
+permalink: /ctf/overthewire/bandit/
 ---
 
 - [Bandit0]({{ '/ctf/overthewire/bandit/bandit0.html' | relative_url }})
