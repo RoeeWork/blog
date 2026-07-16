@@ -7,10 +7,10 @@ title: "bandit9"
 15:54
 
 using strings:
-![](pics/Pasted%20image%2020260716160001.png)
+![]({{ '/ctf/overthewire/bandit/pics/Pasted%20image%2020260716160001.png' | relative_url }})
 lets grep it with the pattern `==`:
 
 
-![](pics/Pasted%20image%2020260716160039.png)
+![]({{ '/ctf/overthewire/bandit/pics/Pasted%20image%2020260716160039.png' | relative_url }})
 
 flag: `B0s2khmbT9u0geKuOoVGW3JZKhndE3BG`
