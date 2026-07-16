@@ -1,9 +1,8 @@
 ---
 layout: page
 title: "OverTheWire"
-permalink: /ctf/overthewire/
+permalink: /ctf/overthewire.html
 ---
 
 OverTheWire wargames:
-
-- [Bandit]({{ '/ctf/overthewire/bandit/' | relative_url }})
+    - [Bandit]({% link ctf/overthewire/bandit/index.markdown %})
