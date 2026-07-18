@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "bandit 12"
+title: "bandit12"
 ---
 
 18-07-2026

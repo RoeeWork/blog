@@ -112,32 +112,22 @@ find "$WORK" -maxdepth 1 -type f -name "*.md" | while read -r file; do
         # Obsidian images
         # ------------------------------------------------
 
-        # ![[pics/image.png|alt text]]
-        s{!\[\[(pics/[^|\]]+)\|([^\]]+)\]\]}{
+        # ![[pics/image.png|alt text]]  or  ![[image.png|alt text]]
+        # (an optional literal "pics/" in the source is stripped and
+        # always re-added below — every image ends up in pics/ in the
+        # output regardless of how the Obsidian link was written)
+        s{!\[\[(?:pics/)?([^|\]]+)\|([^\]]+)\]\]}{
             my $img = $1;
+            my $alt = $2;
             $img =~ s/ /%20/g;
-            "![$2]({{ '\''/$ENV{PICS_PATH}/'\'' . '\''$img'\'' | relative_url }})";
+            "![$alt]({{ '\''/$ENV{PICS_PATH}/'\'' . '\''pics/$img'\'' | relative_url }})";
         }eg;
 
-        # ![[pics/image.png]]
-        s{!\[\[(pics/[^\]]+)\]\]}{
+        # ![[pics/image.png]]  or  ![[image.png]]
+        s{!\[\[(?:pics/)?([^\]]+)\]\]}{
             my $img = $1;
             $img =~ s/ /%20/g;
-            "![]({{ '\''/$ENV{PICS_PATH}/'\'' . '\''$img'\'' | relative_url }})";
-        }eg;
-
-        # ![[image.png|alt text]]
-        s{!\[\[([^/|\]]+)\|([^\]]+)\]\]}{
-            my $img = $1;
-            $img =~ s/ /%20/g;
-            "![$2]({{ '\''/$ENV{PICS_PATH}/'\'' . '\''$img'\'' | relative_url }})";
-        }eg;
-
-        # ![[image.png]]
-        s{!\[\[([^/|\]]+)\]\]}{
-            my $img = $1;
-            $img =~ s/ /%20/g;
-            "![]({{ '\''/$ENV{PICS_PATH}/'\'' . '\''$img'\'' | relative_url }})";
+            "![]({{ '\''/$ENV{PICS_PATH}/'\'' . '\''pics/$img'\'' | relative_url }})";
         }eg;
 
         # ------------------------------------------------
