@@ -14,3 +14,6 @@ permalink: /ctf/overthewire/bandit/
 - [Bandit7]({{ '/ctf/overthewire/bandit/bandit7/' | relative_url }})
 - [Bandit8]({{ '/ctf/overthewire/bandit/bandit8/' | relative_url }})
 - [Bandit9]({{ '/ctf/overthewire/bandit/bandit9/' | relative_url }})
+- [Bandit10]({{ '/ctf/overthewire/bandit/bandit10/' | relative_url }})
+- [Bandit11]({{ '/ctf/overthewire/bandit/bandit11/' | relative_url }})
+- [Bandit 12]({{ '/ctf/overthewire/bandit/bandit 12/' | relative_url }})
