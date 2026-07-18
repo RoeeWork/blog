@@ -116,18 +116,23 @@ find "$WORK" -maxdepth 1 -type f -name "*.md" | while read -r file; do
         # (an optional literal "pics/" in the source is stripped and
         # always re-added below — every image ends up in pics/ in the
         # output regardless of how the Obsidian link was written)
+        #
+        # NOTE: the full path is built here in Perl, as ONE string, then
+        # handed whole to relative_url. Liquid has no "." concatenation
+        # operator (that is Ruby) -- {{ 'a' . 'b' | relative_url }} silently
+        # renders as just 'a', which is why filenames were vanishing.
         s{!\[\[(?:pics/)?([^|\]]+)\|([^\]]+)\]\]}{
             my $img = $1;
             my $alt = $2;
             $img =~ s/ /%20/g;
-            "![$alt]({{ '\''/$ENV{PICS_PATH}/'\'' . '\''pics/$img'\'' | relative_url }})";
+            "![$alt]({{ '\''/$ENV{PICS_PATH}/pics/$img'\'' | relative_url }})";
         }eg;
 
         # ![[pics/image.png]]  or  ![[image.png]]
         s{!\[\[(?:pics/)?([^\]]+)\]\]}{
             my $img = $1;
             $img =~ s/ /%20/g;
-            "![]({{ '\''/$ENV{PICS_PATH}/'\'' . '\''pics/$img'\'' | relative_url }})";
+            "![]({{ '\''/$ENV{PICS_PATH}/pics/$img'\'' | relative_url }})";
         }eg;
 
         # ------------------------------------------------
