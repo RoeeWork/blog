@@ -17,3 +17,7 @@ natas wargames:
 - [Natas9]({{ '/ctf/overthewire/natas/natas9/' | relative_url }})
 - [Natas10]({{ '/ctf/overthewire/natas/natas10/' | relative_url }})
 - [Natas11]({{ '/ctf/overthewire/natas/natas11/' | relative_url }})
+- [Natas12]({{ '/ctf/overthewire/natas/natas12/' | relative_url }})
+- [Natas13]({{ '/ctf/overthewire/natas/natas13/' | relative_url }})
+- [Natas14]({{ '/ctf/overthewire/natas/natas14/' | relative_url }})
+- [Natas15]({{ '/ctf/overthewire/natas/natas15/' | relative_url }})
