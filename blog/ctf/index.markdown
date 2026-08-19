@@ -5,7 +5,5 @@ permalink: /ctf/
 ---
 
 Writeups from various CTF platforms:
-
-- [OverTheWire]({{ '/ctf/overthewire/' | relative_url }})
-
-- [HackThisSite]({{ '/ctf/hackthissite/' | relative_url }})
+[OverTheWire]({{ '/ctf/overthewire/' | relative_url }})
+[HackThisSite]({{ '/ctf/hackthissite/' | relative_url }})
