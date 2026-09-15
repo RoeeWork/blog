@@ -10,6 +10,7 @@ login:
 
 ![]({{ '/ctf/overthewire/natas/pics/Pasted%20image%2020260903153555.png' | relative_url }})
 sourcecode:
+{% raw %}
 ``` php
 function print_credentials() { /* {{{ */
     if($_SESSION and array_key_exists("admin", $_SESSION) and $_SESSION["admin"] == 1) {
@@ -25,12 +26,15 @@ function print_credentials() { /* {{{ */
 session_start();
 print_credentials();
 ```
+{% endraw %}
 
 in order to print the flag for this level, we need to set the admin flag to 1.
 
 the site is colocated with this "CSS STYLE EXPERIMENTER":
 ![]({{ '/ctf/overthewire/natas/pics/Pasted%20image%2020260903153613.png' | relative_url }})
+
 sourcecode:
+{% raw %}
 ``` php
 
 session_start();
@@ -68,8 +72,10 @@ $style = "background-color: ".$_SESSION["bgcolor"]."; text-align: ".$_SESSION["a
 $example = "<div style='$style'>Hello world!</div>";
 
 ```
+{% endraw %}
 
 the vulnerable part of the code is at the first few lines:
+{% raw %}
 ``` php
 session_start();
 
@@ -80,6 +86,8 @@ if(array_key_exists("submit", $_REQUEST)) {
     }
 }
 ```
+{% endraw %}
+
 there is no check for the validity of the keys before they are stored, so we could potentially inject whatever key we wanted. and since the site is "colocated" with the one which has the print_credentials() function, we could use that in order to manipulate the admin key:
 
 ![]({{ '/ctf/overthewire/natas/pics/Pasted%20image%2020260903155347.png' | relative_url }})
