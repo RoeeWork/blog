@@ -89,6 +89,22 @@ pre {
   line-height: 1.7 !important;
   font-family: "Source Code Pro", monospace !important;
 }
+code:not(pre code) {
+  background-color: #1a1a1a;
+  border: 1px var(--base-color);
+  padding: 1px 5px;
+  font-size: 0.9em;
+  font-family: "Source Code Pro", monospace !important;
+  color: var(--text-color);
+}
+
+pre code {
+  background: inherit;
+  background-color: inherit;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+}
 .highlight .hll { background-color: var(--code-color-2); }
 .highlight .c { color: var(--code-color-1); font-style: italic } /* Comment */
 .highlight .err { color: var(--code-color-3); background-color: var(--code-color-4); } /* Error */
